@@ -1,4 +1,8 @@
+# coding=utf-8
+
 import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 import time
 import string
 import psutil
@@ -40,7 +44,9 @@ def main(args):
         enumProcWnds(pid)
         #print title
         fi = open("MusicTitle.txt","wb")
-        fi.write("Now on play: " + title)
+        title2 = "Now playing: " + title
+        title2 = title2.decode('gbk')
+        fi.write(title2.encode('utf-8'))
         fi.close()
         time.sleep(2.0)
 
