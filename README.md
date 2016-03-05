@@ -9,3 +9,5 @@ Using command
 to start  
 
 or you can use a shell to start this background.  
+
+~~要不是国内那谁写的OBS插件在我机器上无法读取虾米和Foobar2000的当前播放曲目，我才不会写这个插件呢~~
