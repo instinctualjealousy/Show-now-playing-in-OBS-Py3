@@ -1,8 +1,8 @@
 # coding=utf-8
 
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+import importlib
+importlib.reload(sys)
 import time
 import string
 import psutil
@@ -22,7 +22,7 @@ def enumWindowsProc(hwnd, lParam):
         if text:
             wStyle = win32api.GetWindowLong(hwnd, win32con.GWL_STYLE)
             if wStyle & win32con.WS_VISIBLE:
-                print("%08X - %s" % (hwnd, text))
+                print(("%08X - %s" % (hwnd, text)))
                 title = text
 
 def enumProcWnds(pid=None):
@@ -48,10 +48,9 @@ def main(args):
             if title != '':
                 fi = open("MusicTitle.txt","wb")
                 title2 = "Now playing: " + title + "   "
-                title2 = title2.decode('gbk')
                 fi.write(title2.encode('utf-8'))
                 fi.close()
-        time.sleep(2.0)
+        time.sleep(4.0)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
