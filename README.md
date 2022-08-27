@@ -1,13 +1,13 @@
-# Show-now-playing-in-OBS
-You could use this script to read process title to text, and show your "now-playing" in OBS.  
+# Show-now-playing-in-OBS-Py3
+Utilized 2to3 and omitted some unnecessary encode/decode commands to result in a usable Python 3 version of this script.<br>
+I also modified it to sleep 4 seconds before looping instead of 2, as I felt 2 was a little fast.
 
-requirement:  psutil (you can install this from pip easily)  
+Requirements (pip install):<br>
+psutil<br>
+pywin32
 
+Use command<br>
+`python OBS_Music_Plugin.py "PROCESS_NAME"`<br>
+to start!
 
-Using command  
-  python OBS_Music_Plugin.py "PROCESS_NAME"  
-to start  
-
-or you can use a shell to start this background.  
-
-~~要不是国内那谁写的OBS插件在我机器上无法读取虾米和Foobar2000的当前播放曲目，我才不会写这个插件呢~~
+Feel free to script it behind the scenes, too.
